@@ -27,6 +27,7 @@ public class Raumschiff {
                 break;
         }
     }
+
     public static boolean pruefeKoordniaten(Raumschiff r1Eosnova, Raumschiff r2Aurora) {
         if(r1Eosnova.getPosX() == r2Aurora.getPosX() && r1Eosnova.getPosY() == r2Aurora.getPosY()) {
             System.out.println("Nachricht--> Hier ist das Raumschiff <" + r2Aurora.getName() + ">!");

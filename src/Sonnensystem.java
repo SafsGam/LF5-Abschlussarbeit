@@ -10,7 +10,9 @@ public class Sonnensystem {
         Kapitaen k2Auroraquest = new Kapitaen("Admiral Zenith Nightfall", 4, 9);
         Raumschiff r1Eosnova = new Raumschiff("Eos Nova", 0,0,k1Eosnova);
         Raumschiff r2Auroraquest = new Raumschiff("Aurora Quest", 0,0,k2Auroraquest);
-
+        Planet p1Auroria = new Planet("Auroria", true, 10, 10);
+        Planet p2Solara = new Planet("Solara", false, 2, -3);
+        Planet p3Ktaris = new Planet("Ktaris", true, -5, 5);
 
         //Game
         System.out.println("Das Spiel beginnt. Sie fliegen das Raumschiff <" + r1Eosnova.getName() + ">.");
@@ -19,7 +21,7 @@ public class Sonnensystem {
         while(!gameOver) {
             r1Eosnova.fliegen(getRichtung(sc, r1Eosnova));
             Raumschiff.pruefeKoordniaten(r1Eosnova, r2Auroraquest);
-
+            Planet.pruefeKoordinaten(p1Auroria,p2Solara, p3Ktaris, r1Eosnova);
         }
     }
     public static char getRichtung(Scanner sc,Raumschiff eosnova) {
